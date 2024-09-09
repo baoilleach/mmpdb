@@ -179,7 +179,7 @@ def parse_cut_smarts(smarts):
     from rdkit import Chem
     from . import smarts_aliases
 
-    smarts_terms = smarts.split("%%") # add support for multiple SMARTS
+    smarts_terms = smarts.split("||") # add support for multiple SMARTS
     if not smarts_terms:
         raise ValueError("cut SMARTS must not be empty")
     patterns = []
